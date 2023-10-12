@@ -14,7 +14,8 @@ namespace ClassesFlotte.Tests
         [TestMethod()]
         public void ChargeUtileTest()
         {
-            // TODO
+            Utilitaire U1 = new Utilitaire(1000, 500, 2500);
+            Assert.AreEqual(500, U1.unPtac);
         }
 
         [TestMethod()]

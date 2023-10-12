@@ -15,7 +15,16 @@ namespace ClassesFlotte
         /// <summary>
         /// Constructeur de la classe Utilitaire
         /// </summary>
-        
+        public Utilitaire(int unPtac, int unPav, int unVolume)
+        {
+            this.ptac = unPtac;
+            this.pav = unPav;
+            this.volume = unVolume;
+        }
+        public int unPtac { get; set; }
+        public int unPav { get; set; }
+        public int unVolume { get; set; }
+
 
         /// <summary>
         /// Retourne un booléen indiquant si le vehicule utilitaire est à entretenir ou non
@@ -40,8 +49,9 @@ namespace ClassesFlotte
         /// <returns>charge utile en kg</returns>
         public int ChargeUtile()
         {
-            // TODO
-            return 0;
+            int utile = 0;
+            utile = unPtac - unPav; 
+            return utile;
         }
     }
 }
